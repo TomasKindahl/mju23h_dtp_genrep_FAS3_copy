@@ -29,6 +29,15 @@
                         Console.WriteLine("Too few arguments for function add!");
                         continue;
                     }
+                    catch (System.FormatException)
+                    {
+
+                        if(command.Length < 3)
+                            Console.WriteLine($"'{command[1]}' is not a number!");
+                        else
+                            Console.WriteLine($"One of '{command[1]}' or '{command[2]}' is not a number!");
+                        continue;
+                    }
                     double add = X + Y;
                     Console.WriteLine($"Add: {X}+{Y} = {add}");
                 }
