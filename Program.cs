@@ -15,15 +15,18 @@
                 }
                 else if (command[0] == "add")
                 {
-                    double X = double.Parse(command[1]);
-                    double Y = double.Parse(command[2]);
+                    // TODO: refaktorera så att dublettkod mellan operatorer försvinner:
+                    // FIXME: System.IndexOutOfRangeException om index 1 eller 2 inte finns
+                    double X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
+                    double Y = double.Parse(command[2]); // FIXME: System.FormatException om command[2] inte innehåller siffra
                     double add = X + Y;
                     Console.WriteLine($"Add: {X}+{Y} = {add}");
                 }
                 else if (command[0] == "div")
                 {
-                    double X = double.Parse(command[1]);
-                    double Y = double.Parse(command[2]);
+                    // FIXME: System.IndexOutOfRangeException om index 1 eller 2 inte finns
+                    double X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
+                    double Y = double.Parse(command[2]); // FIXME: System.FormatException om command[2] inte innehåller siffra
                     double div = X / Y;
                     Console.WriteLine($"Div: {X}/{Y} = {div}");
                 }
@@ -33,15 +36,17 @@
                 }
                 else if (command[0] == "mul")
                 {
-                    double X = double.Parse(command[1]);
-                    double Y = double.Parse(command[2]);
+                    // FIXME: System.IndexOutOfRangeException om index 1 eller 2 inte finns
+                    double X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
+                    double Y = double.Parse(command[2]); // FIXME: System.FormatException om command[2] inte innehåller siffra
                     double mul = X * Y;
                     Console.WriteLine($"Mul: {X}*{Y} = {mul}");
                 }
                 else if (command[0] == "sub")
                 {
-                    double X = double.Parse(command[1]);
-                    double Y = double.Parse(command[2]);
+                    // FIXME: System.IndexOutOfRangeException om index 1 eller 2 inte finns
+                    double X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
+                    double Y = double.Parse(command[2]); // FIXME: System.FormatException om command[2] inte innehåller siffra
                     double sub = X - Y;
                     Console.WriteLine($"Sub: {X}-{Y} = {sub}");
                 }
