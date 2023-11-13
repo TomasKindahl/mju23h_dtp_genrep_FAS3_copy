@@ -17,17 +17,20 @@
                 {
                     // TODO: refaktorera så att dublettkod mellan operatorer försvinner:
                     // FIXME: System.IndexOutOfRangeException om index 1 eller 2 inte finns
-                    double X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
+                    double Y;
+                    double X;
+                    X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
                     try
                     {
-                        double Y = double.Parse(command[2]); // FIXME: System.FormatException om command[2] inte innehåller siffra
-                        double add = X + Y;
-                        Console.WriteLine($"Add: {X}+{Y} = {add}");
+                        Y = double.Parse(command[2]);
                     }
                     catch (System.IndexOutOfRangeException)
                     {
                         Console.WriteLine("Too few arguments for function add!");
+                        continue;
                     }
+                    double add = X + Y;
+                    Console.WriteLine($"Add: {X}+{Y} = {add}");
                 }
                 else if (command[0] == "div")
                 {
