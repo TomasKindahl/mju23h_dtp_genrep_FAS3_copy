@@ -19,9 +19,9 @@
                     // FIXME: System.IndexOutOfRangeException om index 1 eller 2 inte finns
                     double Y;
                     double X;
-                    X = double.Parse(command[1]); // FIXME: System.FormatException om command[1] inte innehåller siffra
                     try
                     {
+                        X = double.Parse(command[1]);
                         Y = double.Parse(command[2]);
                     }
                     catch (System.IndexOutOfRangeException)
